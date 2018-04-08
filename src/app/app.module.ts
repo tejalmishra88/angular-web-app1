@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { FeaturesComponent } from './features/features.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostComponent } from './post/post.component';
 let routes: Routes= [
   { path: "features",
     component: FeaturesComponent
@@ -15,12 +17,20 @@ let routes: Routes= [
   {
     path: "pricing",
     component: PricingComponent
+  },
+  {
+    path: "posts",
+    component: PostsComponent
+  },
+  {
+    path: "posts/:id",
+    component: PostComponent
   }
 ]
 
 @NgModule({
-  declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent, ],
-  imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes), ],
+  declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent, PostsComponent, PostComponent, ],
+  imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes,{ useHash: true}), ],
   providers: [],
   bootstrap: [AppComponent]
 })
