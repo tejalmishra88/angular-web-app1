@@ -10,6 +10,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './post/post.component';
+import { LoginComponent } from './login.component';
 let routes: Routes= [
   { path: "features",
     component: FeaturesComponent
@@ -25,11 +26,20 @@ let routes: Routes= [
   {
     path: "posts/:id",
     component: PostComponent
-  }
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
 ]
 
 @NgModule({
-  declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent, PostsComponent, PostComponent, ],
+  declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent,
+     PostsComponent, PostComponent,LoginComponent ],
   imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes,{ useHash: true}), ],
   providers: [],
   bootstrap: [AppComponent]
