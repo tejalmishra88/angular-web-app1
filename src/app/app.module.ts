@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FetchdataService } from './fetchdata.service';
 
 import { AppComponent } from './app.component';
 import { FeaturesComponent } from './features/features.component';
@@ -41,7 +41,7 @@ let routes: Routes= [
   declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent,
      PostsComponent, PostComponent,LoginComponent ],
   imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes,{ useHash: true}), ],
-  providers: [],
+  providers: [ FetchdataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FetchdataService } from '../fetchdata.service';
 
 @Component({
   selector: 'app-pricing',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent implements OnInit {
-
-  constructor() { }
+result: any;
+  constructor( private _fetchData: FetchdataService ) { }
 
   ngOnInit() {
+    this.result = this._fetchData.data;
   }
 
 }
