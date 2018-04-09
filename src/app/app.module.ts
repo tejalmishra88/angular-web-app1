@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './post/post.component';
 import { LoginComponent } from './login.component';
+import { HighLighterDirective } from './high-lighter.directive';
 let routes: Routes= [
   { path: "features",
     component: FeaturesComponent
@@ -39,7 +40,7 @@ let routes: Routes= [
 
 @NgModule({
   declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent,
-     PostsComponent, PostComponent,LoginComponent ],
+     PostsComponent, PostComponent,LoginComponent, HighLighterDirective ],
   imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes,{ useHash: true}), ],
   providers: [ FetchdataService ],
   bootstrap: [AppComponent]
