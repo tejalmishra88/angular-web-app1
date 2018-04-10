@@ -26,7 +26,7 @@
        <input type="checkbox" name="" id="" [(ngModel)] = "show"> Show / Hide
      </p>
         <h1 class="display-4" [appHighLighter] = "color" *appMyNgIf="show" > {{title |
-           titlecase}}</h1>
+           capitalize}}</h1>
            <h2>Current Date: {{dt | date: 'short'}}</h2>
            <p>{{obj | json}}</p>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
