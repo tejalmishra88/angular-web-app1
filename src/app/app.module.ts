@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { LoginComponent } from './login.component';
 import { HighLighterDirective } from './high-lighter.directive';
 import { MyNgIfDirective } from './my-ng-if.directive';
+import { CapitalizePipe } from './capitalize.pipe';
 let routes: Routes= [
   { path: "features",
     component: FeaturesComponent
@@ -41,7 +42,7 @@ let routes: Routes= [
 
 @NgModule({
   declarations: [    AppComponent, FeaturesComponent, PricingComponent, SidebarComponent,
-     PostsComponent, PostComponent,LoginComponent, HighLighterDirective, MyNgIfDirective ],
+     PostsComponent, PostComponent,LoginComponent, HighLighterDirective, MyNgIfDirective, CapitalizePipe ],
   imports: [    BrowserModule , FormsModule, RouterModule.forRoot(routes,{ useHash: true}), ],
   providers: [ FetchdataService ],
   bootstrap: [AppComponent]

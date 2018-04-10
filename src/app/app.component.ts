@@ -11,5 +11,7 @@ export class AppComponent {
   title = 'hello World';
   color = 'blue';
   show = 0;
+  dt = new Date();
+  obj = { foo:'bar', baz: 'qux', nested: { xyz: 3, numbers: [ 1,2,3,4,5,] } }
  // title = 'app';
 }
