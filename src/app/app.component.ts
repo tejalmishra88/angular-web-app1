@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello World';
   color = 'blue';
+  show = 0;
  // title = 'app';
 }
