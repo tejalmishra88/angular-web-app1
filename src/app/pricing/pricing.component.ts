@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {FetchdataService } from '../fetchdata.service';
+//import {FetchdataService } from '../fetchdata.service';
 
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.css']
 })
-export class PricingComponent implements OnInit {
+export class PricingComponent  {
 result: any;
-  constructor( private _fetchData: FetchdataService ) { }
+  //constructor( private _fetchdata: FetchdataService ) { }
 
-  ngOnInit() {
-    this.result = this._fetchData.data;
+ // ngOnInit() {
+   // this.result = this._fetchdata.Data;
   }
 
-}
+

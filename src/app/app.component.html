@@ -40,6 +40,12 @@
         <div class="row">
           <div class="col-md-8">
            <router-outlet></router-outlet>
+           <h2> Data Fetched from JsonPlaceHolder Api</h2>
+           <div id="data" *ngFor="let r of result[0]">
+             <h3>{{ r.title }}</h3>
+             <p>{{ r.body }}</p>
+           </div>
+           <button (click)="sendData()"> Save Data</button>
           </div>
           <div class="col-md-4">
               <app-sidebar></app-sidebar>
